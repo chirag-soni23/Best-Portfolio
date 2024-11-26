@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: first;
+    src: url("./fonts/first.woff2");
+}
+@font-face {
+    font-family: second;
+    src: url("./fonts/second.woff2");
+}
+/* body{
+    background-color: #FEFAE0;
+} */
+
+:root {
+  --background-color: #FEFAE0;
+  --text-color: #000;
+}
+
+.dark-theme {
+  --background-color: #000;
+  --text-color: #FEFAE0;
+}
+
+/* Apply theme colors to the body */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Button styling */
+.theme-toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.theme-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+*::-webkit-scrollbar{
+  height: 0.5rem;
+  width: 0.2rem;
+}
+*::-webkit-scrollbar-track{
+  background-color: transparent;
+}
+*::-webkit-scrollbar-thumb{
+  background-color: #2e2d2b;
+}
+@keyframes lineMove {
+    0% {
+    width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  .animate-lineMove {
+    animation: lineMove 1s ease-in-out infinite;
+  }
