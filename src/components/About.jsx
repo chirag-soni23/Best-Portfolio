@@ -47,7 +47,7 @@ const About = () => {
       {/* Overlay */}
       <div
         ref={overlayRef}
-        className="fixed top-0 left-0 w-full h-full bg-black z-40"
+        className={`fixed top-0 left-0 w-full h-full ${darkMode?"bg-[#F1FED4]":"bg-black"} z-40`}
         style={{ transform: "translateY(-100%)", opacity: 0 }}
       ></div>
 
