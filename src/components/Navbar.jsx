@@ -22,18 +22,17 @@ const Navbar = () => {
       return;
     }
 
-    // Close the menu when a link is clicked
     setIsOpen(false);
 
-    // Animate overlay from bottom to top, navigate, then top to bottom
+    
     gsap.to(overlayRef.current, {
-      y: "0%", // Move overlay from bottom to visible
+      y: "0%",
       duration: 0.8,
       ease: "power3.out",
       onComplete: () => {
-        navigate(targetPath); // Navigate to the target route
+        navigate(targetPath);
         gsap.to(overlayRef.current, {
-          y: "-100%", // Reset overlay (move from top to hidden)
+          y: "-100%", 
           duration: 0.8,
           ease: "power3.in",
         });
@@ -71,7 +70,7 @@ const Navbar = () => {
       {/* Overlay */}
       <div
         ref={overlayRef}
-        className="fixed top-0 left-0 w-full h-full bg-black z-40"
+        className={`fixed top-0 left-0 w-full h-full z-40 ${darkMode ? "bg-[#F1F3DF]":"bg-black"}`}
         style={{ transform: "translateY(100%)" }} 
       ></div>
 
@@ -83,12 +82,12 @@ const Navbar = () => {
         <div className="relative h-6 w-10 cursor-pointer" onClick={toggleMenu}>
           <div
             className={`absolute top-0 left-0 h-[2px] w-10 ${darkMode ? "bg-[#F1F3DF]":"bg-black"} transition-transform ${
-              isOpen ? "rotate-45 bg-white translate-y-2.5 w-6 ml-2" : ""
+              isOpen ? `rotate-45 ${darkMode?"bg-black":"bg-[#F1F3DF]"} translate-y-2.5 w-6 ml-2` : ""
             }`}
           ></div>
           <div
             className={`absolute top-2.5 left-2 h-[2px] w-6 ${darkMode ? "bg-[#F1F3DF]":"bg-black"} transition-transform ${
-              isOpen ? `-rotate-45 bg-white -translate-y-3.6 w-6` : ``
+              isOpen ? `-rotate-45 ${darkMode?"bg-black":"bg-[#F1F3DF]"} -translate-y-3.6 w-6` : ``
             }`}
           ></div>
           <div
