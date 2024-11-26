@@ -16,11 +16,11 @@
 
 :root {
   --background-color: #FEFAE0;
-  --text-color: #000;
+  --text-color: #0D0701;
 }
 
 .dark-theme {
-  --background-color: #000;
+  --background-color: #0D0701;
   --text-color: #FEFAE0;
 }
 
