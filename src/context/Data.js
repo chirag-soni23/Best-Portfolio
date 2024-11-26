@@ -42,3 +42,31 @@ export const Data = [
   
    
   ];
+
+
+  export const Expertise = [
+    {
+      name:"HTML"
+    },
+    {
+      name:"CSS"
+    },
+    {
+      name:"Tailwind CSS"
+    },
+    {
+      name:"Javascript"
+    },
+    {
+      name:"Framer Motion"
+    },
+    {
+      name:"GSAP"
+    },
+    {
+      name:"React"
+    },
+    {
+      name:"SASS"
+    },
+  ]

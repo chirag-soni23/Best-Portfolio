@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
+import { Expertise } from '../context/Data';
 const Skills = () => {
   const { darkMode } = useContext(ThemeContext)
   return (
@@ -48,38 +49,12 @@ const Skills = () => {
 
       {/* Skills Section */}
       <div className='flex flex-wrap items-center justify-center gap-4 mt-10'>
-        <div className="flex relative mt-5 h-[34px] min-w-[118px] flex-1 items-center justify-center rounded-sm border border-black px-5 text-small lg:flex-none">
-          HTML
-          <span className='bg-[#DDA15E] absolute top-0 left-0 w-[10%] h-[40%] rounded-br-full'></span>
-        </div>
-        <div className="flex relative mt-5 h-[34px] min-w-[118px] flex-1 items-center justify-center rounded-sm border border-black px-5 text-small lg:flex-none">
-          CSS
-          <span className='bg-[#DDA15E] absolute top-0 left-0 w-[10%] h-[40%] rounded-br-full'></span>
-        </div>
-        <div className="flex relative mt-5 h-[34px] min-w-[118px] flex-1 items-center justify-center rounded-sm border border-black px-5 text-small lg:flex-none">
-          Tailwind CSS
-          <span className='bg-[#DDA15E] absolute top-0 left-0 w-[10%] h-[40%] rounded-br-full'></span>
-        </div>
-        <div className="flex relative mt-5 h-[34px] min-w-[118px] flex-1 items-center justify-center rounded-sm border border-black px-5 text-small lg:flex-none">
-          Javascript
-          <span className='bg-[#DDA15E] absolute top-0 left-0 w-[10%] h-[40%] rounded-br-full'></span>
-        </div>
-        <div className="flex relative mt-5 h-[34px] min-w-[118px] flex-1 items-center justify-center rounded-sm border border-black px-5 text-small lg:flex-none">
-          Framer Motion
-          <span className='bg-[#DDA15E] absolute top-0 left-0 w-[10%] h-[40%] rounded-br-full'></span>
-        </div>
-        <div className="flex relative mt-5 h-[34px] min-w-[118px] flex-1 items-center justify-center rounded-sm border border-black px-5 text-small lg:flex-none">
-          GSAP
-          <span className='bg-[#DDA15E] absolute top-0 left-0 w-[10%] h-[40%] rounded-br-full'></span>
-        </div>
-        <div className="flex relative mt-5 h-[34px] min-w-[118px] flex-1 items-center justify-center rounded-sm border border-black px-5 text-small lg:flex-none">
-          React
-          <span className='bg-[#DDA15E] absolute top-0 left-0 w-[10%] h-[40%] rounded-br-full'></span>
-        </div>
-        <div className="flex relative mt-5 h-[34px] min-w-[118px] flex-1 items-center justify-center rounded-sm border border-black px-5 text-small lg:flex-none">
-          SASS
-          <span className='bg-[#DDA15E] absolute top-0 left-0 w-[10%] h-[40%] rounded-br-full'></span>
-        </div>
+        {Expertise.map((expert, index) => {
+          return <div key={index} className={`flex relative mt-5 h-[34px] min-w-[118px] flex-1 items-center justify-center rounded-sm border ${darkMode ? "border-[#F1F3DF]" : "border-black"} px-5 text-small lg:flex-none`}>
+            {expert.name}
+            <span className='bg-[#DDA15E] absolute top-0 left-0 w-[10%] h-[40%] rounded-br-full'></span>
+          </div>
+        })}
       </div>
     </div>
   );
