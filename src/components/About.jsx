@@ -9,7 +9,6 @@ const About = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // GSAP overlay animation
   useEffect(() => {
     const overlay = overlayRef.current;
 
@@ -31,7 +30,6 @@ const About = () => {
   }, [location]);
 
   const handleLinkClick = () => {
-    // Trigger overlay slide effect
     const overlay = overlayRef.current;
     gsap.to(overlay, {
       y: "0%",
@@ -39,7 +37,7 @@ const About = () => {
       duration: 1,
       ease: "power3.out",
       onComplete: () => {
-        navigate("/project"); // Navigate to the Projects page after animation
+        navigate("/project"); 
       },
     });
   };
@@ -54,17 +52,14 @@ const About = () => {
       ></div>
 
       <div className="relative text-center">
-        {/* Foreground Text */}
         <h4 className={`relative tracking-[5px] z-10 right-3 font-[first] ${darkMode ? "text-[#F1F3DF]" : "text-black"} text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase`}>
           who am i
         </h4>
-        {/* Realistic Shadow Effect */}
         <h4 className="absolute top-3 tracking-[5px] font-[first] text-[#DDA15F] z-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase">
           who am i
         </h4>
       </div>
 
-      {/* Description Paragraph */}
       <p className={`font-[second] text-sm sm:text-base md:text-lg lg:text-xl text-center mt-10 ${darkMode ? "text-[#F1F3DF]" : "text-gray-700"} max-w-[80%] sm:max-w-[70%] md:max-w-[60%] lg:max-w-[100%] tracking-widest`}>
         Hello, I'm Chirag, a web designer, React front-end developer, and content creator. I specialize in creating stunning landing pages, websites, and dynamic front-end applications for businesses worldwide. If you're looking for a modern and impactful website, feel free to email me. If we are a good fit, I'll provide a time and cost estimate for your project.
       </p>
