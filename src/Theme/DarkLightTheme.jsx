@@ -6,7 +6,7 @@ const DarkLightTheme = () => {
   const { darkMode, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <div onClick={toggleTheme} className="theme-toggle fixed bg-black shadow-white shadow 2xl flex justify-center items-center left-10 bottom-10 rounded-full p-2 cursor-pointer">
+    <div onClick={toggleTheme} className="theme-toggle fixed bg-black flex justify-center items-center left-4 bottom-4 rounded-full p-2 cursor-pointer">
       <button className="theme-button cursor-pointer">
         {darkMode ? <FaSun size={24} color="#FFD700" /> : <FaMoon size={24} color="#1E90FF" />}
       </button>
