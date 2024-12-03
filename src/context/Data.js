@@ -68,15 +68,24 @@ export const Data = [
       name:"Javascript"
     },
     {
-      name:"Framer Motion"
+      name:"React"
     },
     {
       name:"GSAP"
     },
     {
-      name:"React"
+      name:"Node.js"
     },
     {
-      name:"SASS"
+      name:"Express.js"
+    },
+    {
+      name:"Mongodb"
+    },
+    {
+      name:"Git"
+    },
+    {
+      name:"DSA"
     },
   ]

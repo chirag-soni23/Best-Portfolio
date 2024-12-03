@@ -37,14 +37,14 @@ const Skills = () => {
       <div className="relative text-center mt-5">
         {/* Foreground Text */}
         <h4 className={`relative tracking-[5px] z-10 right-3 font-[first] ${darkMode ? "text-[#F1F3DF]" : "text-black"}text-4xl sm:text-5xl md:text-6xl lg:text-7xl`}>
-          <h4 className="text-pretty sm:text-7xl md:text-8xl lg:text-2xl mt-2 font-[first]">Front-End Development</h4>
+          <h4 className="text-pretty sm:text-7xl md:text-8xl lg:text-2xl mt-2 font-[first]">Full-Stack Development</h4>
         </h4>
         {/*  Shadow Effect */}
         <span className="absolute bottom-2 right-4 tracking-[5px] font-[first] bg-[#DDA15F] w-full h-[15%] text-center z-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl"></span>
       </div>
 
       <p className={`font-[second] text-sm sm:text-base md:text-lg lg:text-xl text-center ${darkMode ? "text-[#F1F3DF]" : "text-gray-700"} mt-10 max-w-[80%] sm:max-w-[70%] md:max-w-[60%] lg:max-w-[100%] tracking-widest`}>
-        I create websites from scratch, making them responsive, powerful, and completely unique. My goal is to ensure everything looks fantastic and operates seamlessly, so you can enjoy using your websites without any problems!
+      I am a skilled Full Stack Developer with expertise in both frontend and backend technologies. Proficient in the MERN stack (MongoDB, Express, React, Node.js), I specialize in building scalable, responsive web applications. I have experience with RESTful APIs, user authentication, and third-party integrations. Passionate about creating efficient and user-friendly digital experiences.
       </p>
 
       {/* Skills Section */}
