@@ -62,21 +62,21 @@ const Contact = () => {
             name="name"
             required
           />
-          <span className={`absolute font-[first] left-0 ${darkMode ? "text-[#F1F3DF]" : "text-gray-500"} text-xs transition-all duration-300 ease-in-out peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-[-20px] peer-focus:text-xspeer-focus:text-gray-500
+          <span className={`absolute font-[first] left-0 ${darkMode ? "text-[#F1F3DF]" : "text-gray-500"} text-xs transition-all duration-300 ease-in-out peer-placeholder-shown:top-2 peer-placeholder-shown:text-base -mt-3 peer-placeholder-shown:text-gray-400 peer-focus:top-[-20px] peer-focus:text-xspeer-focus:text-gray-500
           ${darkMode ? "peer-focus:text-[#F1F3DF]":"peer-focus:text-gray-500"}`}>
             FULL NAME
           </span>
         </div>
 
         {/* Email */}
-        <div className="inputBox relative">
+        <div className="emailBox relative">
           <input value={formData.email} onChange={handleChange}
             className={`inputText duration-300 transition-all w-full border-b border-gray-300 ${darkMode?"focus:border-[F1F3DF]":"focus:border-black"}  outline-none py-2 bg-transparent peer`}
             type="email"
             name="email"
             required
           />
-          <span className={`absolute font-[first] left-0 ${darkMode ? "text-[#F1F3DF]" : "text-gray-500"} text-xs transition-all duration-300 ease-in-out peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-[-20px] peer-focus:text-xs peer-focus:text-gray-500
+          <span className={`absolute font-[first] left-0 ${darkMode ? "text-[#F1F3DF]" : "text-gray-500"} text-xs transition-all duration-300 ease-in-out peer-placeholder-shown:top-2 -mt-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-[-20px] peer-focus:text-xs peer-focus:text-gray-500
           ${darkMode ? "peer-focus:text-[#F1F3DF]":"peer-focus:text-gray-500"}`}>
             EMAIL
           </span>
