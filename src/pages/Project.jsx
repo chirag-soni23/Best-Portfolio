@@ -37,7 +37,7 @@ const Project = () => {
         {Data.map((item) => (
           <div
             key={item.id}
-            className={`${darkMode?"bg-[#0D0701]":"bg-[FEFAE0]"} rounded-md overflow-hidden`}
+            className={`${darkMode ? "bg-[#0D0701]" : "bg-[FEFAE0]"} rounded-md overflow-hidden`}
           >
             {/* Project Image */}
             <img
@@ -55,16 +55,21 @@ const Project = () => {
               <div className="flex flex-wrap gap-2 mt-4">
 
                 {item.feature.map((feature, index) => (
-                 <div className={`flex relative mt-5 h-[34px] min-w-[118px] flex-1 items-center justify-center rounded-sm border ${darkMode ? "border-[#F1F3DF]" : "border-black"} px-5 text-small lg:flex-none`}>
-          {feature}
-          <span className='bg-[#DDA15E] absolute top-0 left-0 w-[10%] h-[40%] rounded-br-full'></span>
-        </div>
+                  <div className={`flex relative mt-5 h-[34px] min-w-[118px] flex-1 items-center justify-center rounded-sm border ${darkMode ? "border-[#F1F3DF]" : "border-black"} px-5 text-small lg:flex-none`}>
+                    {feature}
+                    <span className='bg-[#DDA15E] absolute top-0 left-0 w-[10%] h-[40%] rounded-br-full'></span>
+
+                  </div>
+
                 ))}
               </div>
-                <div className="flex gap-2 mt-5">
-                    <span className="bg-[#DDA15E] px-2 text-white cursor-pointer flex items-center justify-center">go live</span>
-                    <span className="border-[#DDA15E] border-2 text-[#DDA15E] px-2 flex items-center justify-center  cursor-pointer">see code</span>
-                </div>
+              <div className=" flex gap-2  mt-5">
+                <a href={`${item.hosting}`} className="bg-[#DDA15E] px-2 text-white cursor-pointer flex items-center justify-center">go live</a>
+                <a href={`${item.code}`} className="border-[#DDA15E] border-2 text-[#DDA15E] px-2 flex items-center justify-center  cursor-pointer">see code</a>
+              </div>
+
+
+
             </div>
           </div>
         ))}

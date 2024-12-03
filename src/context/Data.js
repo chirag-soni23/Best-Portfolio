@@ -1,43 +1,53 @@
-import movie from '../assets/movies-spot.jpg';
+import food from '../assets/food.png';
+import LandingPage from '../assets/LandingPage.png';
 import myBanki from '../assets/myBanki.jpg';
-import natours from '../assets/natours.jpg';
 import nexter from '../assets/nexter.jpg';
 import trillo from '../assets/trillo.jpg';
 export const Data = [
     {
       id: 1,
-      image: movie,
-      name: "MovieSpot",
-      description: "MovieSpot is a movie app that allows users to watch movies and TV shows",
-      feature:["HTML","CSS","SASS","React","Framer Motion"]
+      image: food,
+      name: "FoodSearch",
+      description: "Food search app is a React-based platform that uses an API to help users find their favorite dishes and restaurants. Adding features like a loader, search suggestions, and filters can enhance the user experience further",
+      feature:["HTML","Tailwind Css","React"],
+      code:"https://github.com/chirag-soni23/food-search-app",
+      hosting:"https://food-search-app-rho.vercel.app/"
     },
     {
       id: 2,
-      image: natours,
-      name: "natours",
-      description: "The Natours landing page is a beautiful, interactive website that promotes nature and adventure tours for nature and adventure lovers.",
-      feature:["HTML","CSS","SASS"]
+      image: LandingPage,
+      name: "LandingPage",
+      description: "MyTunes is a sleek and modern music platform landing page designed for music enthusiasts. It offers a dynamic, responsive interface to explore and enjoy favorite tunes effortlessly.",
+      feature:["HTML","CSS"],
+       code:"https://github.com/chirag-soni23/Landing-page-Encryptix-",
+      hosting:"https://landingpagein.netlify.app/"
     },
     {
       id: 3,
       image: nexter,
       name: "nexter",
       description: "nexter is a simple landing page for selling luxury homes.",
-      feature:["HTML","CSS","SASS",]
+      feature:["HTML","CSS","SASS",],
+       code:"",
+      hosting:""
     },
     {
       id: 4,
       image: myBanki,
       name: "myBanki",
       description: "myBanki is a fun project that simulates an online banking platform. It consists of a static webpage providing bank information such as features and pricing, along with a user-friendly dashboard where users can view their balance and perform various actions.",
-      feature:["HTML","CSS","tailwindcss","React","Framer Motion"]
+      feature:["HTML","CSS","tailwindcss","React","Framer Motion"],
+       code:"",
+      hosting:""
     },
     {
       id: 1,
       image: trillo,
       name: "trillo",
       description: "trillo is a simple one-page hotel booking landing page.",
-      feature:["HTML","CSS","SASS"]
+      feature:["HTML","CSS","SASS"],
+       code:"https://github.com/chirag-soni23/food-search-app",
+      hosting:"https://food-search-app-rho.vercel.app/"
     },
   
    
