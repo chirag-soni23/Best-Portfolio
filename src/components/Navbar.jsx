@@ -82,12 +82,12 @@ const Navbar = () => {
         <div className="relative h-6 w-10 cursor-pointer" onClick={toggleMenu}>
           <div
             className={`absolute top-0 left-0 h-[2px] w-10 ${darkMode ? "bg-[#F1F3DF]":"bg-black"} transition-transform ${
-              isOpen ? `rotate-45 ${darkMode?"bg-black":"bg-[#F1F3DF]"} translate-y-2.5 w-6 ml-2` : ""
+              isOpen ? `rotate-45 ${darkMode?"bg-black":"bg-white"} translate-y-2.5 w-6 ml-2` : ""
             }`}
           ></div>
           <div
             className={`absolute top-2.5 left-2 h-[2px] w-6 ${darkMode ? "bg-[#F1F3DF]":"bg-black"} transition-transform ${
-              isOpen ? `-rotate-45 ${darkMode?"bg-black":"bg-[#F1F3DF]"} -translate-y-3.6 w-6` : ``
+              isOpen ? `-rotate-45 ${darkMode?"bg-black":"bg-white"} -translate-y-3.6 w-6` : ``
             }`}
           ></div>
           <div
