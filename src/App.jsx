@@ -18,7 +18,7 @@ const App = () => {
           </Routes>
         </Layout>
       </Router>
-            <DarkLightTheme/>
+      <DarkLightTheme/>
     </>
   );
 };

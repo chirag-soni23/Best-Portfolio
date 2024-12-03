@@ -18,7 +18,6 @@ const Navbar = () => {
 
   const handleLinkClick = (targetPath) => {
     if (location.pathname === targetPath) {
-      // Same page, no animation
       return;
     }
 

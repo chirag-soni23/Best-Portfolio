@@ -3,7 +3,7 @@ import { ThemeContext } from "../context/ThemeContext";
 
 const Home = () => {
     const {darkMode} = useContext(ThemeContext);
-    const texts = ["MERN Stack Developer","Frontend Developer","Javascript Expert"];
+    const texts = ["MERN Stack Developer","Frontend Developer","Javascript Expert","Data Structure"];
     const [currentText,setCurrentText] = useState(texts[0]);
 
     useEffect(()=>{

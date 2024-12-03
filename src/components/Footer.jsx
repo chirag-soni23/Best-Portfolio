@@ -8,7 +8,7 @@ const Footer = () => {
           {/* GitHub Icon */}
           <a 
             className="cursor-pointer" 
-            href="https://github.com/mounirabcire" 
+            href="https://github.com/chirag-soni23" 
             target="_blank" 
             rel="noreferrer"
           >
@@ -19,7 +19,7 @@ const Footer = () => {
           {/* Instagram Icon */}
           <a 
             className="cursor-pointer" 
-            href="https://www.instagram.com/mounir.codes" 
+            href="https://www.instagram.com/0x_chirag_0x" 
             target="_blank" 
             rel="noreferrer"
           >
@@ -32,7 +32,7 @@ const Footer = () => {
           {/* Email Icon */}
           <a 
             className="cursor-pointer" 
-            href="mailto:mounirwebdevcode@gmail.com" 
+            href="mailto:csoni0693@gmail.com" 
             target="_blank" 
             rel="noreferrer"
           >
@@ -44,7 +44,7 @@ const Footer = () => {
         </div>
 
         <p className={`text-sm ${darkMode?"text-[#F1F3DF]":"text-gray-700"}`}>want to send a message from here?</p>
-        <p class={`pb-5 text-sm lg:text-sm ${darkMode?"text-[#F1F3DF]":"text-gray-700"}`}>© 2024 chirag.codes Front-end Developer</p>
+        <p class={`pb-5 text-sm lg:text-sm ${darkMode?"text-[#F1F3DF]":"text-gray-700"}`}>© 2024 chirag.codes Full-Stack Developer</p>
     </div>
   );
 };

@@ -10,7 +10,7 @@ const Skills = () => {
         <h4 className={`relative tracking-[5px] z-10 right-3 font-[first] ${darkMode ? "text-[#F1F3DF]" : "text-black"} text-4xl sm:text-5xl md:text-6xl lg:text-7xl`}>
           <h4 className="uppercase text-pretty text-6xl sm:text-7xl md:text-8xl lg:text-8xl mt-2 font-[first]">what i do</h4>
         </h4>
-        {/* Realistic Shadow Effect */}
+        {/* Shadow Effect */}
         <h4 className="absolute top-3 tracking-[5px] font-[first] text-[#DDA15F] z-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           <h4 className="uppercase text-pretty text-6xl sm:text-7xl md:text-8xl lg:text-8xl mt-2 font-[first]">what i do</h4>
         </h4>
@@ -21,7 +21,7 @@ const Skills = () => {
         <h4 className={`relative tracking-[5px] z-10 right-3 font-[first] ${darkMode ? "text-[#F1F3DF]" : "text-black"} text-4xl sm:text-5xl md:text-6xl lg:text-7xl`}>
           <h4 className="text-pretty sm:text-7xl md:text-8xl lg:text-2xl mt-2 font-[first]">Web Design</h4>
         </h4>
-        {/* Realistic Shadow Effect */}
+        {/* Shadow Effect */}
         <span className="absolute bottom-2 right-4 tracking-[5px] font-[first] bg-[#DDA15F] w-full h-[15%] text-center z-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl"></span>
       </div>
 
@@ -39,7 +39,7 @@ const Skills = () => {
         <h4 className={`relative tracking-[5px] z-10 right-3 font-[first] ${darkMode ? "text-[#F1F3DF]" : "text-black"}text-4xl sm:text-5xl md:text-6xl lg:text-7xl`}>
           <h4 className="text-pretty sm:text-7xl md:text-8xl lg:text-2xl mt-2 font-[first]">Front-End Development</h4>
         </h4>
-        {/* Realistic Shadow Effect */}
+        {/*  Shadow Effect */}
         <span className="absolute bottom-2 right-4 tracking-[5px] font-[first] bg-[#DDA15F] w-full h-[15%] text-center z-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl"></span>
       </div>
 
