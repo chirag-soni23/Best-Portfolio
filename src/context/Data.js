@@ -1,7 +1,7 @@
 import food from '../assets/food.png';
 import LandingPage from '../assets/LandingPage.png';
+import Calculator from '../assets/Calculator.png'
 import myBanki from '../assets/myBanki.jpg';
-import nexter from '../assets/nexter.jpg';
 import trillo from '../assets/trillo.jpg';
 export const Data = [
     {
@@ -24,12 +24,12 @@ export const Data = [
     },
     {
       id: 3,
-      image: nexter,
-      name: "nexter",
-      description: "nexter is a simple landing page for selling luxury homes.",
-      feature:["HTML","CSS","SASS",],
-       code:"",
-      hosting:""
+      image: Calculator,
+      name: "Calculator",
+      description: "I created a basic calculator using HTML and CSS. It features a clean design and performs basic arithmetic operations like addition, subtraction, multiplication, and division.",
+      feature:["HTML","CSS","JavaScript"],
+       code:"https://github.com/chirag-soni23/Calualtor-Encryptix-",
+      hosting:"https://phenomenal-tulumba-27e2ae.netlify.app/"
     },
     {
       id: 4,
