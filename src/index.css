@@ -66,3 +66,36 @@ body {
   .animate-lineMove {
     animation: lineMove 1s ease-in-out infinite;
   }
+
+  @keyframes arrowMoveRight{
+    0%{
+      transform: translateX(0);
+    }
+    50%{
+      transform: translateX(10px);
+    }
+    100%{
+      transform: translateX(0);
+    }
+
+  }
+
+  @keyframes arrowMoveLeft{
+    0%{
+      transform: translateX(0);
+    }
+    50%{
+      transform: translateX(-10px);
+    }
+    100%{
+      transform: translateX(0);
+    }
+
+  }
+  
+  .arrow-line{
+    animation: arrowMoveRight 1s ease-in-out infinite;
+  }
+  .arrow-line2{
+    animation: arrowMoveLeft 1s ease-in-out infinite;
+  }

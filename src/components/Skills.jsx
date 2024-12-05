@@ -62,12 +62,12 @@ const Skills = () => {
 
       </div>
         {/* resume */}
-        <div className='mt-20 flex gap-3 items-center justify-center w-full'>
-          <FaArrowRight className='animate-bounce'/>
+        <div className='mt-20 flex gap-3 items-center justify-center w-1/2'>
+          <FaArrowRight className='arrow-line'/>
         <a href={resume} download='Resume.pdf' className={`flex relative h-[34px] min-w-[118px] flex-1 items-center cursor-pointer justify-center rounded-sm border ${darkMode ? "border-[#F1F3DF]" : "border-black"} px-5 text-small lg:flex-none`} >
           Resume
         </a>
-        <FaArrowLeft className='animate-bounce'/>
+        <FaArrowLeft className='arrow-line2'/>
         </div>
     </div>
   );
