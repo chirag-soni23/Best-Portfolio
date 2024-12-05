@@ -1,6 +1,9 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 import { Expertise } from '../context/Data';
+import { FaArrowLeft } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
+import resume from '../assets/Resume.pdf'
 const Skills = () => {
   const { darkMode } = useContext(ThemeContext)
   return (
@@ -55,7 +58,17 @@ const Skills = () => {
             <span className='bg-[#DDA15E] absolute top-0 left-0 w-[10%] h-[40%] rounded-br-full'></span>
           </div>
         })}
+
+
       </div>
+        {/* resume */}
+        <div className='mt-20 flex gap-3 items-center justify-center w-full'>
+          <FaArrowRight className='animate-bounce'/>
+        <a href={resume} download='Resume.pdf' className={`flex relative h-[34px] min-w-[118px] flex-1 items-center cursor-pointer justify-center rounded-sm border ${darkMode ? "border-[#F1F3DF]" : "border-black"} px-5 text-small lg:flex-none`} >
+          Resume
+        </a>
+        <FaArrowLeft className='animate-bounce'/>
+        </div>
     </div>
   );
 };
