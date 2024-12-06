@@ -6,7 +6,7 @@ const Project = () => {
   const { darkMode } = useContext(ThemeContext);
 
   return (
-    <div className="flex flex-col items-center justify-center mt-20 px-5 sm:px-10">
+    <div className="flex flex-col items-center justify-center mt-44 px-5 sm:px-10">
       <div className="relative text-center">
         <h4
           className={`relative tracking-[5px] z-10 font-[first] ${
