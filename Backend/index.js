@@ -33,6 +33,10 @@ app.post("/send-email",async(req,res)=>{
         res.status(500).json({ message: 'Failed to send email', error });
       }
 })
+
+app.get('/',(req,res)=>{
+  res.send("Hello")
+})
 app.listen(PORT,()=>{
     console.log(`Server running on port: ${PORT}`);
 })
