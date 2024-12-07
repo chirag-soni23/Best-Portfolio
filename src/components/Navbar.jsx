@@ -18,6 +18,7 @@ const Navbar = () => {
 
   const handleLinkClick = (targetPath) => {
     if (location.pathname === targetPath) {
+      setIsOpen(false);
       return;
     }
 
