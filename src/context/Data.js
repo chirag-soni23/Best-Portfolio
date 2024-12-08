@@ -1,8 +1,8 @@
 import food from '../assets/food.png';
 import LandingPage from '../assets/LandingPage.png';
-import Calculator from '../assets/Calculator.png'
-import Portfolio from '../assets/Portfolio.png'
-import myBanki from '../assets/myBanki.jpg';
+import Calculator from '../assets/Calculator.png';
+import Portfolio from '../assets/Portfolio.png';
+import Pinterest from '../assets/Pinterest.png';
 export const Data = [
     {
       id: 1,
@@ -42,12 +42,12 @@ export const Data = [
     },
     {
       id: 5,
-      image: myBanki,
-      name: "myBanki",
-      description: "myBanki is a fun project that simulates an online banking platform. It consists of a static webpage providing bank information such as features and pricing, along with a user-friendly dashboard where users can view their balance and perform various actions.",
-      feature:["HTML","CSS","tailwindcss","React","Framer Motion"],
-       code:"",
-      hosting:""
+      image: Pinterest,
+      name: "Pinterest",
+      description: "A Pinterest Clone built with the MERN stack allows users to upload, organize, and explore images. Features include user authentication, pin creation with descriptions, search functionality, and personalized boards. The responsive UI is crafted with React and Tailwind CSS, while Cloudinary handles image uploads. Backend APIs in Node.js with Express interact with a MongoDB database. The project supports liking, commenting, and infinite scrolling for a seamless user experience.",
+      feature:["HTML","CSS","tailwindcss","React"],
+       code:"https://github.com/chirag-soni23/Pinterest",
+      hosting:"https://pinterest-kl0i.onrender.com/"
     },
 
    
