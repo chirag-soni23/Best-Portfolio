@@ -1,4 +1,4 @@
-import food from '../assets/food.png';
+import food from '../assets/Food.png';
 import LandingPage from '../assets/LandingPage.png';
 import Calculator from '../assets/Calculator.png';
 import Portfolio from '../assets/Portfolio.png';
