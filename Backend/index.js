@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
+const path = require("path");
 const PORT = 5000;
 require('dotenv').config();
 
@@ -34,9 +35,12 @@ app.post("/send-email",async(req,res)=>{
       }
 })
 
-app.get('/',(req,res)=>{
-  res.send("Hello")
+const dirname = path.resolve();
+app.use(express.static(path.join(dirname,"/Frontend/dist")))
+app.get("*",(req,res)=>{
+    res.sendFile(path.join(dirname,"Frontend","dist","index.html"))
 })
+
 app.listen(PORT,()=>{
     console.log(`Server running on port: ${PORT}`);
 })

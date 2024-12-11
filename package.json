@@ -4,7 +4,9 @@
   "description": "this is my best portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start":"node Backend/index.js",
+    "dev":"nodemon Backend/index.js",
+    "build":"npm install && cd Frontend && npm install && npm run build"
   },
   "author": "Chirag Soni",
   "license": "ISC",
