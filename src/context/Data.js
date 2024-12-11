@@ -9,7 +9,7 @@ export const Data = [
       image: Portfolio,
       name: "MyPortfolio",
       description: "Creative web portfolio designed with HTML, Tailwind CSS, and Three.js. It features modern, responsive layouts and sleek user interfaces. Using Three.js, interactive 3D visualizations bring the design to life. The portfolio demonstrates my skills in front-end development and cutting-edge web technologies.",
-      feature:["HTML","Tailwind Css","React","Three.js"],
+      feature:["HTML","Tailwind Css","React","Three.js","Node.js"],
       code:"https://github.com/chirag-soni23/Amazing-Portfolio",
       hosting:"https://amazing-portfolio-one.vercel.app/"
     },
@@ -45,7 +45,7 @@ export const Data = [
       image: Pinterest,
       name: "Pinterest",
       description: "A Pinterest Clone built with the MERN stack allows users to upload, organize, and explore images. Features include user authentication, pin creation with descriptions, search functionality, and personalized boards. The responsive UI is crafted with React and Tailwind CSS, while Cloudinary handles image uploads. Backend APIs in Node.js with Express interact with a MongoDB database. The project supports liking, commenting, and infinite scrolling for a seamless user experience.",
-      feature:["HTML","CSS","tailwindcss","React"],
+      feature:["HTML","CSS","tailwindcss","React","Node.  js","Express.js","Mongodb"],
        code:"https://github.com/chirag-soni23/Pinterest",
       hosting:"https://pinterest-kl0i.onrender.com/"
     },
