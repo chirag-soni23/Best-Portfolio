@@ -1,2 +1,53 @@
-node_modules
+# Node modules
+/node_modules/
+
+# Build output
+/build/
+/dist/
+
+# Environment files
 .env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE and editor folders
+.vscode/
+.idea/
+
+# Temporary files
+*.swp
+*.swo
+
+# Test coverage
+/coverage/
+
+# Dependency directories for yarn
+.pnp/
+.pnp.js
+
+# Parcel-bundler cache
+.cache/
+
+# Next.js build directory
+.next/
+
+# React Native build artifacts
+.expo/
+
+# Sentry debug files
+.sentry-debug/
+
+# Other files
+npm-shrinkwrap.json
