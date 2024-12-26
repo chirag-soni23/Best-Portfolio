@@ -41,6 +41,10 @@ app.get("*",(req,res)=>{
     res.sendFile(path.join(dirname,"Frontend","dist","index.html"))
 })
 
+app.get('/',(req,res)=>{
+  res.send("Hello")
+})
+
 app.listen(PORT,()=>{
     console.log(`Server running on port: ${PORT}`);
 })
