@@ -18,7 +18,7 @@ const Project = () => {
           </span>
         </h4>
         {/* Realistic Shadow Effect */}
-        <h4 className="absolute top-3 tracking-[5px] font-[first] text-[#DDA15F] z-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+        <h4 className="absolute top-3 tracking-[5px] font-[first] text-[#dda05f83] z-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
           <span className="uppercase text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-2 font-[first]">
             my work
           </span>

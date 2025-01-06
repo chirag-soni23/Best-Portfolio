@@ -55,7 +55,7 @@ const About = () => {
         <h4 className={`relative tracking-[5px] z-10 right-3 font-[first] ${darkMode ? "text-[#F1F3DF]" : "text-black"} text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase`}>
           who am i
         </h4>
-        <h4 className="absolute top-3 tracking-[5px] font-[first] text-[#DDA15F] z-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase">
+        <h4 className="absolute top-3 tracking-[5px] font-[first] text-[#dda05f83] z-0 text-4xl sm:text-5xl md:text-6xl lg:text-7xl uppercase">
           who am i
         </h4>
       </div>
