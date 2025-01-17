@@ -35,7 +35,6 @@ app.post("/send-email",async(req,res)=>{
       }
 })
 
-
 const dirname = path.resolve();
 app.use(express.static(path.join(dirname,"/Frontend/dist")))
 app.get("*",(req,res)=>{
