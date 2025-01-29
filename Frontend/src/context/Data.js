@@ -3,6 +3,7 @@ import LandingPage from '../assets/LandingPage.png';
 import Calculator from '../assets/Calculator.png';
 import Portfolio from '../assets/Portfolio.png';
 import Pinterest from '../assets/Pinterest.png';
+import ATM from '../assets/ATM.png';
 export const Data = [
     {
       id: 1,
@@ -48,6 +49,15 @@ export const Data = [
       feature:["HTML","CSS","tailwindcss","React","Node.  js","Express.js","Mongodb"],
        code:"https://github.com/chirag-soni23/Pinterest",
       hosting:"https://pinterest-kl0i.onrender.com/"
+    },
+    {
+      id: 6,
+      image: ATM,
+      name: "ATM-System",
+      description: "I’ve built an ATM system using the MERN stack where users can deposit, withdraw, and transfer money through a mobile-friendly UI. It also supports theme switching for a customizable experience. Sounds like a solid project! 🚀",
+      feature:["HTML","CSS","tailwindcss","React","Node.js","Express.js","Mongodb","daisyui"],
+       code:"https://github.com/chirag-soni23/ATM-Machine",
+      hosting:"https://atm-machine-ar8t.onrender.com/"
     },
 
    
