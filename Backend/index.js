@@ -4,11 +4,13 @@ const cors = require('cors');
 const nodemailer = require('nodemailer');
 const path = require("path");
 const PORT = 5000;
+const compression = require('compression');
 require('dotenv').config();
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
+app.use(compression());
 
 app.post("/send-email",async(req,res)=>{
     const {name,email,subject,message} = req.body;
