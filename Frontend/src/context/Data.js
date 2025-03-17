@@ -4,6 +4,8 @@ import Calculator from '../assets/Calculator.png';
 import Portfolio from '../assets/Portfolio.png';
 import Pinterest from '../assets/Pinterest.png';
 import ATM from '../assets/ATM.png';
+import Library from '../assets/Library.png';
+import Spotify from '../assets/Spotify.png';
 export const Data = [
     {
       id: 1,
@@ -58,6 +60,24 @@ export const Data = [
       feature:["HTML","CSS","tailwindcss","React","Node.js","Express.js","Mongodb","daisyui"],
        code:"https://github.com/chirag-soni23/ATM-Machine",
       hosting:"https://atm-machine-ar8t.onrender.com/"
+    },
+    {
+      id: 7,
+      image: Library,
+      name: "Library Management",
+      description: "A full-stack library management system built with the MERN stack. Features include user registration, login with OTP verification, forgot password, profile editing, and admin panel, and an attendance system with a calendar. Styled using DaisyUI for a responsive and visually appealing design.",
+      feature:["HTML","CSS","tailwindcss","React","Node.js","Express.js","Mongodb","daisyui"],
+       code:"https://github.com/chirag-soni23/Vaishnav-library",
+      hosting:"https://vaishnav-library.onrender.com/"
+    },
+    {
+      id: 8,
+      image: Spotify,
+      name: "Spotify",
+      description: "Spotify Clone – MERN Stack Music Streaming App 🎶 This is a MERN stack-based Spotify clone featuring music streaming, user authentication, playlists, and a sleek UI. Built with MongoDB, Express.js, React.js, and Node.js, it ensures smooth performance and scalability.",
+      feature:["HTML","CSS","tailwindcss","React","Node.js","Express.js","Mongodb"],
+       code:"https://github.com/chirag-soni23/Spotify-Clone",
+      hosting:"https://spotify-clone-e92r.onrender.com/"
     },
 
    

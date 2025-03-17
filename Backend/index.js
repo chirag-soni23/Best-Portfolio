@@ -35,18 +35,18 @@ app.post("/send-email", async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: 'Failed to send email', error });
   }
-})
+});
 
 const dirname = path.resolve();
 app.use(express.static(path.join(dirname, "/Frontend/dist")))
 app.get("*", (req, res) => {
   res.sendFile(path.join(dirname, "Frontend", "dist", "index.html"))
-})
+});
 
 app.get('/', (req, res) => {
   res.send("Hello")
-})
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT} http://localhost:${PORT}`);
-})
+});
