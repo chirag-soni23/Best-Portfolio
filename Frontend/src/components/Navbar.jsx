@@ -109,7 +109,10 @@ const Navbar = () => {
             className="text-white text-sm font-medium transition group"
           >
             <button
-              onClick={() => handleLinkClick("/")}
+              onClick={() => {
+                handleLinkClick("/");
+                window.scrollTo(0, 0);
+              }}
               className={`${darkMode ? "text-black":"text-[#F1F3DF]"} block text-sm font-medium transition group`}
             >
               Home
@@ -121,7 +124,10 @@ const Navbar = () => {
             className={`${darkMode ? "text-black":"text-[#F1F3DF]"} text-sm font-medium transition group`}
           >
             <button
-              onClick={() => handleLinkClick("/project")}
+                onClick={() => {
+                  handleLinkClick("/project");
+                  window.scrollTo(0, 0);
+                }}
               className={`block ${darkMode ? "text-black":"text-[#F1F3DF]"}  text-sm font-medium transition group`}
             >
               Projects
@@ -133,7 +139,10 @@ const Navbar = () => {
             className="text-white text-sm font-medium transition group"
           >
             <button
-              onClick={() => handleLinkClick("/contact")}
+                onClick={() => {
+                  handleLinkClick("/contact");
+                  window.scrollTo(0, 0);
+                }}
               className={`block text-sm font-medium transition group ${darkMode ? "text-black":"text-[#F1F3DF]"}`}
             >
               Contact
