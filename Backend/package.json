@@ -4,8 +4,8 @@
   "description": "this is my best portfolio",
   "main": "index.js",
   "scripts": {
-    "start": "node Backend/index.js",
-    "dev": "nodemon Backend/index.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "build": "npm install && cd Frontend && npm install && npm run build"
   },
   "author": "Chirag Soni",
