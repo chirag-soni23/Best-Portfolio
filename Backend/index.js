@@ -2,7 +2,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const nodemailer = require("nodemailer");
-const path = require("path");
 const PORT = 5000;
 const compression = require("compression");
 require("dotenv").config();
@@ -48,11 +47,6 @@ app.post("/send-email", async (req, res) => {
   }
 });
 
-const dirname = path.resolve();
-app.use(express.static(path.join(dirname, "/Frontend/dist")));
-app.get("*", (req, res) => {
-  res.sendFile(path.join(dirname, "Frontend", "dist", "index.html"));
-});
 
 app.get("/", (req, res) => {
   res.send("Hello");
