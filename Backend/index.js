@@ -38,7 +38,7 @@ app.post("/send-email", async (req, res) => {
       </div>
     `,
   };
-  
+
   try {
     await transporter.sendMail(mailOptions);
     res.status(200).json({ message: "Email sent successfully!" });
@@ -46,7 +46,6 @@ app.post("/send-email", async (req, res) => {
     res.status(500).json({ message: "Failed to send email", error });
   }
 });
-
 
 app.get("/", (req, res) => {
   res.send("Hello");

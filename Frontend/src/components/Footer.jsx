@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
 const Footer = () => {
   const { darkMode } = useContext(ThemeContext);
+  let currentYear = new Date().getFullYear();
   return (
     <div className='flex flex-col w-full h-full items-center justify-center mt-24 gap-1 mb-2'>
         <div className="flex mb-10 items-center justify-center gap-6 flex-wrap">
@@ -44,7 +45,7 @@ const Footer = () => {
         </div>
 
         <p className={`text-sm ${darkMode?"text-[#F1F3DF]":"text-gray-700"}`}>want to send a message from here?</p>
-        <p class={`pb-5 text-sm lg:text-sm ${darkMode?"text-[#F1F3DF]":"text-gray-700"}`}>© 2024 chirag.codes Full-Stack Developer</p>
+        <p class={`pb-5 text-sm lg:text-sm ${darkMode?"text-[#F1F3DF]":"text-gray-700"}`}>© {currentYear} chirag.codes Full-Stack Developer</p>
     </div>
   );
 };
