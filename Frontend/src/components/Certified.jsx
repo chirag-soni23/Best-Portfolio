@@ -43,7 +43,7 @@ const Certified = () => {
             onClick={() => setIsOpen(false)}
             className="block w-full group text-center"
           >
-            My Certificate
+            My Certificates
             <span
               className={`block ${
                 darkMode ? "bg-black" : "bg-[#F1F3DF]"
