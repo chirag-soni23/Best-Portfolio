@@ -15,6 +15,9 @@ import certificate4 from "../certificates/Certificate4.png";
 import certificate5 from "../certificates/Certificate5.png";
 import certificate6 from "../certificates/Certificate6.png";
 import certificate7 from "../certificates/Certificate7.png";
+import certificate8 from "../certificates/Certificate8.png";
+import certificate9 from "../certificates/Certificate9.png";
+import certificate10 from "../certificates/Certificate10.png";
 export const Data = [
   {
     id: 1,
@@ -197,5 +200,20 @@ export const certificates = [
     url: certificate7,
     credentials:
       "https://media.geeksforgeeks.org/auth-certificates/1746729000/88010f0cadb7e20516a4184985de3881.png",
+  },
+  {
+    url: certificate8,
+    credentials:
+      "Encryptix Internship Certificate",
+  },
+  {
+    url: certificate9,
+    credentials:
+      "Skill Academy By Testbook Course Completion Certificate",
+  },
+  {
+    url: certificate10,
+    credentials:
+      "Skill Academy By Testbook Internship Certificate",
   },
 ];

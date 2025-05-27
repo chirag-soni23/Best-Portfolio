@@ -15,8 +15,10 @@ const Certificate = () => {
             darkMode ? "text-[#F1F3DF]" : "text-black"
           } text-3xl sm:text-4xl md:text-5xl lg:text-6xl`}
         >
-          <span className="uppercase text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-2 right-3 relative font-[first]">
-            Certificate
+          <span className="uppercase text-pretty text-3xl sm:text-5xl md:text-6xl lg:text-7xl mt-2 right-3 relative font-[first] flex items-center justify-center flex-wrap">
+             <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">🎖️</span>
+             Certificate 
+             <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">🎖️</span>
           </span>
         </h4>
 
@@ -24,7 +26,7 @@ const Certificate = () => {
           aria-hidden="true"
           className="absolute top-1 left-1/2 -translate-x-1/2 tracking-[5px] font-[first] text-[#dda05f83] z-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
         >
-          <span className="uppercase text-pretty opacity-[2] text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-2 font-[first]">
+          <span className="uppercase text-pretty opacity-[2] text-3xl sm:text-5xl md:text-6xl lg:text-7xl mt-2 font-[first]">
             Certificate
           </span>
         </h4>
