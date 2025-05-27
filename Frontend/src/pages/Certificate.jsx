@@ -22,9 +22,9 @@ const Certificate = () => {
 
         <h4
           aria-hidden="true"
-          className="absolute top-4 left-1/2 -translate-x-1/2 tracking-[5px] font-[first] text-[#dda05f83] z-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+          className="absolute top-1 left-1/2 -translate-x-1/2 tracking-[5px] font-[first] text-[#dda05f83] z-0 text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
         >
-          <span className="uppercase text-pretty opacity-2 text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-2 font-[first]">
+          <span className="uppercase text-pretty opacity-[2] text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-2 font-[first]">
             Certificate
           </span>
         </h4>

@@ -50,7 +50,6 @@ app.get("/", (req, res) => {
   res.send("Hello");
 });
 
-
 app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT} http://localhost:${PORT}`);
 });
