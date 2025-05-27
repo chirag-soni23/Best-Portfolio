@@ -7,23 +7,31 @@ import Contact from "./pages/Contact";
 import DarkLightTheme from "./Theme/DarkLightTheme";
 import Certified from "./components/Certified";
 import Certificate from "./pages/Certificate";
+import { useLocation } from "react-router-dom";
+
+const AppContent = () => {
+  const location = useLocation();
+
+  return (
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/certificate" element={<Certificate />} />
+      </Routes>
+
+      {location.pathname != "/certificate" && <Certified />}
+    </Layout>
+  );
+};
 
 const App = () => {
   return (
-    <>
-      <Router>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<Hero />} />
-            <Route path="/project" element={<Project />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/certificate" element={<Certificate />} />
-          </Routes>
-      <Certified/>
-        </Layout>
-      </Router>
-      <DarkLightTheme/>
-    </>
+    <Router>
+      <AppContent />
+      <DarkLightTheme />
+    </Router>
   );
 };
 
