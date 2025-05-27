@@ -54,7 +54,7 @@ const Certificate = () => {
                 darkMode ? "border-[#F1F3DF]" : "border-black"
               } px-5 text-small lg:flex-none cursor-pointer`}
             >
-              <button>Show Credentials</button>
+              <h1 className="text-sm">Show Credentials</h1>
               <span className="bg-[#DDA15E] absolute top-0 left-0 w-[10%] h-[40%] rounded-br-full"></span>
             </div>
           </div>
@@ -67,7 +67,7 @@ const Certificate = () => {
           <div className="bg-white rounded-lg shadow-lg max-w-3xl w-full relative overflow-hidden">
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-2 right-3 text-gray-600 hover:text-black text-2xl font-bold z-10"
+              className="absolute top-2 right-3 text-white bg-black hover:bg-gray-800 w-7 h-7 flex justify-center items-center rounded-full text-2xl font-bold z-10"
             >
               &times;
             </button>
@@ -82,8 +82,8 @@ const Certificate = () => {
 
       {/* Modal for Credentials */}
       {selectedCredentials && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 px-4">
-          <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md relative">
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center flex-wrap z-50 px-4">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md relative break-words">
             <button
               onClick={() => setSelectedCredentials(null)}
               className="absolute top-2 right-3 text-gray-600 hover:text-black text-2xl font-bold z-10"
@@ -93,7 +93,12 @@ const Certificate = () => {
             <h2 className="text-lg font-semibold text-gray-800 mb-2">
               Certificate Credentials
             </h2>
-            <p className="text-sm text-gray-700">{selectedCredentials}</p>
+            <a
+              href={selectedCredentials}
+              className="text-sm text-black break-words block overflow-auto max-w-full"
+            >
+              {selectedCredentials}
+            </a>
           </div>
         </div>
       )}
