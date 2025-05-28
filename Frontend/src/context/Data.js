@@ -113,7 +113,7 @@ export const Data = [
       "daisyui",
     ],
     code: "https://github.com/chirag-soni23/Vaishnav-library",
-    hosting: "https://vaishnav-library.onrender.com/",
+    hosting: "https://vaishnav-library-ki2m.onrender.com/",
   },
   {
     id: 8,
