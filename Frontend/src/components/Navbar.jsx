@@ -153,6 +153,22 @@ const Navbar = () => {
               ></span>
             </button>
           </div>
+          <div
+            ref={(el) => (linksRef.current[3] = el)}
+            className="text-sm font-medium transition group"
+          >
+            <button
+              onClick={() => handleLinkClick("/certificate")}
+              className={`${darkMode ? "text-black" : "text-[#F1F3DF]"} block`}
+            >
+              Certificate
+              <span
+                className={`block ${
+                  darkMode ? "bg-black" : "bg-[#F1F3DF]"
+                } rounded-sm h-[2px] w-1 mx-auto mt-1 transition-all duration-300 group-hover:w-full`}
+              ></span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

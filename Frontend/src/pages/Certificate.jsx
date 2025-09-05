@@ -1,15 +1,27 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { certificates } from "../context/Data";
-import { Award } from "lucide-react"; // ✅ Import Lucide icon
+import { Award } from "lucide-react";
+import Confetti from "react-confetti"; 
+import { useWindowSize } from "react-use";
 
 const Certificate = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [selectedCredentials, setSelectedCredentials] = useState(null);
   const { darkMode } = useContext(ThemeContext);
 
+  const { width, height } = useWindowSize();
+  const [showConfetti, setShowConfetti] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowConfetti(false), 4000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="max-w-[85rem] mt-16 px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <div className="max-w-[85rem] mt-16 px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto relative">
+      {showConfetti && <Confetti width={width} height={height} recycle={false} numberOfPieces={700} />}
+
       <div className="relative text-center">
         <h4
           className={`relative tracking-[5px] z-10 font-[first] ${
@@ -37,22 +49,22 @@ const Certificate = () => {
       <div className="grid grid-cols-2 mt-10 sm:grid-cols-4 gap-6">
         {certificates.map((cert, idx) => (
           <div key={idx} className="space-y-2">
-            {/* Image Click: Show Image Only */}
+            {/* Image Click */}
             <img
               className="w-full h-auto object-cover rounded-lg shadow cursor-pointer"
               src={cert.url}
               alt={`Certificate ${idx + 1}`}
               onClick={() => {
-                setSelectedCredentials(null); // close credentials if open
-                setSelectedImage(cert.url); // open image
+                setSelectedCredentials(null);
+                setSelectedImage(cert.url);
               }}
             />
 
-            {/* Show Credentials Button */}
+            {/* Show Credentials */}
             <div
               onClick={() => {
-                setSelectedImage(null); // close image if open
-                setSelectedCredentials(cert.credentials); // open credentials
+                setSelectedImage(null);
+                setSelectedCredentials(cert.credentials);
               }}
               className={`flex relative mt-5 h-[34px] min-w-[118px] flex-1 items-center justify-center rounded-sm border ${
                 darkMode ? "border-[#F1F3DF]" : "border-black"

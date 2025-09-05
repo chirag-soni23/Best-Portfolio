@@ -25,7 +25,7 @@ const AppContent = () => {
           </Routes>
 
         </Stairs>
-          {location.pathname != "/certificate" && <Certified />}
+          {/* {location.pathname != "/certificate" && <Certified />} */}
       </Layout>
     </>
   );
