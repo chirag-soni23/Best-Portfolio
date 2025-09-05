@@ -1,8 +1,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { Expertise } from "../context/Data";
-import { FaArrowLeft } from "react-icons/fa6";
-import { FaArrowRight } from "react-icons/fa6";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import resume from "../assets/Resume.pdf";
 const Skills = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -106,7 +105,7 @@ const Skills = () => {
       </div>
       {/* resume */}
       <div className="mt-20 flex gap-3 items-center justify-center w-1/2">
-        <FaArrowRight className="arrow-line" />
+        <ArrowRight className="arrow-line" />
         <a
           href={resume}
           download="Resume.pdf"
@@ -116,7 +115,7 @@ const Skills = () => {
         >
           Resume
         </a>
-        <FaArrowLeft className="arrow-line2" />
+        <ArrowLeft className="arrow-line2" />
       </div>
     </div>
   );
