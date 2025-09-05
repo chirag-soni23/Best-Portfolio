@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { certificates } from "../context/Data";
+import { Award } from "lucide-react"; // ✅ Import Lucide icon
 
 const Certificate = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -15,10 +16,10 @@ const Certificate = () => {
             darkMode ? "text-[#F1F3DF]" : "text-black"
           } text-3xl sm:text-4xl md:text-5xl lg:text-6xl`}
         >
-          <span className="uppercase text-pretty text-3xl sm:text-5xl md:text-6xl lg:text-7xl mt-2 right-3 relative font-[first] flex items-center justify-center flex-wrap">
-             <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">🎖️</span>
-             Certificate 
-             <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl">🎖️</span>
+          <span className="uppercase text-pretty text-3xl sm:text-5xl md:text-6xl lg:text-7xl mt-2 right-3 relative font-[first] flex items-center justify-center gap-2 flex-wrap">
+            <Award className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-[#DDA15E]" />
+            Certificate
+            <Award className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-[#DDA15E]" />
           </span>
         </h4>
 
@@ -32,6 +33,7 @@ const Certificate = () => {
         </h4>
       </div>
 
+      {/* Certificates Grid */}
       <div className="grid grid-cols-2 mt-10 sm:grid-cols-4 gap-6">
         {certificates.map((cert, idx) => (
           <div key={idx} className="space-y-2">
@@ -46,7 +48,7 @@ const Certificate = () => {
               }}
             />
 
-            {/* Show Credentials Click: Show Credentials Only */}
+            {/* Show Credentials Button */}
             <div
               onClick={() => {
                 setSelectedImage(null); // close image if open
