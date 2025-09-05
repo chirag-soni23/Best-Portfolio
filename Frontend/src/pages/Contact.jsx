@@ -23,7 +23,7 @@ const Contact = () => {
     setIsLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:3000/send-email",
+        "https://best-portfolio-18at.onrender.com/send-email",
         formData
       );
       toast.success(response.data.message);
