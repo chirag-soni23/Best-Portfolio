@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { certificates } from "../context/Data";
 import { Award } from "lucide-react";
-import Confetti from "react-confetti"; 
+import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
 
 const Certificate = () => {
@@ -12,15 +12,27 @@ const Certificate = () => {
 
   const { width, height } = useWindowSize();
   const [showConfetti, setShowConfetti] = useState(true);
+  const [recycleConfetti, setRecycleConfetti] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowConfetti(false), 4000);
-    return () => clearTimeout(timer);
+    const timer = setTimeout(() => setRecycleConfetti(false), 3000);
+    const hideTimer = setTimeout(() => setShowConfetti(false), 8000);
+    return () => {
+      clearTimeout(timer);
+      clearTimeout(hideTimer);
+    };
   }, []);
 
   return (
     <div className="max-w-[85rem] mt-16 px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto relative">
-      {showConfetti && <Confetti width={width} height={height} recycle={false} numberOfPieces={700} />}
+      {showConfetti && (
+        <Confetti
+          width={width}
+          height={height}
+          recycle={recycleConfetti}
+          numberOfPieces={700}
+        />
+      )}
 
       <div className="relative text-center">
         <h4
@@ -45,11 +57,9 @@ const Certificate = () => {
         </h4>
       </div>
 
-      {/* Certificates Grid */}
       <div className="grid grid-cols-2 mt-10 sm:grid-cols-4 gap-6">
         {certificates.map((cert, idx) => (
           <div key={idx} className="space-y-2">
-            {/* Image Click */}
             <img
               className="w-full h-auto object-cover rounded-lg shadow cursor-pointer"
               src={cert.url}
@@ -60,7 +70,6 @@ const Certificate = () => {
               }}
             />
 
-            {/* Show Credentials */}
             <div
               onClick={() => {
                 setSelectedImage(null);
@@ -77,41 +86,39 @@ const Certificate = () => {
         ))}
       </div>
 
-      {/* Modal for Image */}
       {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 px-4">
-          <div className="bg-white rounded-lg shadow-lg max-w-3xl w-full relative overflow-hidden">
+        <div className="fixed top-0 left-0 right-0 bottom-0 inset-0 bg-black bg-opacity-60 flex items-center justify-center px-4">
+          <div className="bg-white rounded-lg shadow-lg w-full max-w-3xl relative flex flex-col items-center justify-center p-4">
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-2 right-3 text-white bg-black hover:bg-gray-800 w-7 h-7 flex justify-center items-center rounded-full text-2xl font-bold z-10"
+              className="absolute top-3 right-3 text-white bg-black hover:bg-gray-800 w-8 h-8 flex justify-center items-center rounded-full text-2xl font-bold z-10"
             >
               &times;
             </button>
             <img
               src={selectedImage}
               alt="Selected Certificate"
-              className="w-full h-auto object-contain"
+              className="max-h-[80vh] w-auto object-contain"
             />
           </div>
         </div>
       )}
 
-      {/* Modal for Credentials */}
       {selectedCredentials && (
-        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center flex-wrap z-50 px-4">
-          <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md relative break-words">
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 px-4">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md relative flex flex-col items-center justify-center">
             <button
               onClick={() => setSelectedCredentials(null)}
-              className="absolute top-2 right-3 text-gray-600 hover:text-black text-2xl font-bold z-10"
+              className="absolute top-3 right-3 text-gray-600 hover:text-black text-2xl font-bold z-10"
             >
               &times;
             </button>
-            <h2 className="text-lg font-semibold text-gray-800 mb-2">
+            <h2 className="text-lg font-semibold text-gray-800 mb-2 text-center">
               Certificate Credentials
             </h2>
             <a
               href={selectedCredentials}
-              className="text-sm text-black break-words block overflow-auto max-w-full"
+              className="text-sm text-black break-words text-center"
             >
               {selectedCredentials}
             </a>
