@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import DarkLightTheme from "./Theme/DarkLightTheme";
 import Certificate from "./pages/Certificate";
 import Stairs from "./common/Stairs";
+import { ToastContainer } from "react-toastify";
 
 const AppContent = () => {
   return (
@@ -29,6 +30,11 @@ const App = () => {
     <Router>
       <AppContent />
       <DarkLightTheme />
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+      />
     </Router>
   );
 };
