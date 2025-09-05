@@ -8,21 +8,26 @@ import DarkLightTheme from "./Theme/DarkLightTheme";
 import Certified from "./components/Certified";
 import Certificate from "./pages/Certificate";
 import { useLocation } from "react-router-dom";
+import Stairs from "./common/Stairs";
 
 const AppContent = () => {
   const location = useLocation();
 
   return (
-    <Layout>
-      <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/project" element={<Project />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/certificate" element={<Certificate />} />
-      </Routes>
+    <>
+      <Layout>
+        <Stairs>
+          <Routes>
+            <Route path="/" element={<Hero />} />
+            <Route path="/project" element={<Project />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/certificate" element={<Certificate />} />
+          </Routes>
 
-      {location.pathname != "/certificate" && <Certified />}
-    </Layout>
+        </Stairs>
+          {location.pathname != "/certificate" && <Certified />}
+      </Layout>
+    </>
   );
 };
 

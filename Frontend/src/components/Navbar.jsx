@@ -8,7 +8,6 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
   const linksRef = useRef([]);
-  const overlayRef = useRef(null);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -23,20 +22,8 @@ const Navbar = () => {
     }
 
     setIsOpen(false);
-
-    gsap.to(overlayRef.current, {
-      y: "0%",
-      duration: 0.8,
-      ease: "power3.out",
-      onComplete: () => {
-        navigate(targetPath);
-        gsap.to(overlayRef.current, {
-          y: "-100%",
-          duration: 0.8,
-          ease: "power3.in",
-        });
-      },
-    });
+    navigate(targetPath);
+    window.scrollTo(0, 0);
   };
 
   useEffect(() => {
@@ -72,15 +59,6 @@ const Navbar = () => {
 
   return (
     <div>
-      {/* Overlay */}
-      <div
-        ref={overlayRef}
-        className={`fixed top-0 left-0 w-full h-full z-40 ${
-          darkMode ? "bg-[#F1F3DF]" : "bg-black"
-        }`}
-        style={{ transform: "translateY(100%)" }}
-      ></div>
-
       <div className="fixed flex justify-between items-center z-50 bg-transparent top-0 left-0 right-0 font-[first] lg:justify-between backdrop-blur-sm py-5 px-20">
         {/* Logo */}
         <Link to={"/"} className="text-sm font-bold">
@@ -129,16 +107,11 @@ const Navbar = () => {
         >
           <div
             ref={(el) => (linksRef.current[0] = el)}
-            className="text-white text-sm font-medium transition group"
+            className="text-sm font-medium transition group"
           >
             <button
-              onClick={() => {
-                handleLinkClick("/");
-                window.scrollTo(0, 0);
-              }}
-              className={`${
-                darkMode ? "text-black" : "text-[#F1F3DF]"
-              } block text-sm font-medium transition group`}
+              onClick={() => handleLinkClick("/")}
+              className={`${darkMode ? "text-black" : "text-[#F1F3DF]"} block`}
             >
               Home
               <span
@@ -150,18 +123,11 @@ const Navbar = () => {
           </div>
           <div
             ref={(el) => (linksRef.current[1] = el)}
-            className={`${
-              darkMode ? "text-black" : "text-[#F1F3DF]"
-            } text-sm font-medium transition group`}
+            className="text-sm font-medium transition group"
           >
             <button
-              onClick={() => {
-                handleLinkClick("/project");
-                window.scrollTo(0, 0);
-              }}
-              className={`block ${
-                darkMode ? "text-black" : "text-[#F1F3DF]"
-              }  text-sm font-medium transition group`}
+              onClick={() => handleLinkClick("/project")}
+              className={`${darkMode ? "text-black" : "text-[#F1F3DF]"} block`}
             >
               Projects
               <span
@@ -173,16 +139,11 @@ const Navbar = () => {
           </div>
           <div
             ref={(el) => (linksRef.current[2] = el)}
-            className="text-white text-sm font-medium transition group"
+            className="text-sm font-medium transition group"
           >
             <button
-              onClick={() => {
-                handleLinkClick("/contact");
-                window.scrollTo(0, 0);
-              }}
-              className={`block text-sm font-medium transition group ${
-                darkMode ? "text-black" : "text-[#F1F3DF]"
-              }`}
+              onClick={() => handleLinkClick("/contact")}
+              className={`${darkMode ? "text-black" : "text-[#F1F3DF]"} block`}
             >
               Contact
               <span
